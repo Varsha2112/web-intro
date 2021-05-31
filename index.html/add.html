@@ -9,6 +9,7 @@
 
         body{
             display : flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -17,12 +18,20 @@
 
 </head>
 <body>
+    <h1 id="headingTotal">0</h1>
    <input id="inputamt" type="test"></input>
     <button id="btnaddexpense">+</button>
     
 
     <script>
+
+        //get heading element
+        const headingEl = document.querySelector("#headingTotal");
+
         let totalexpense = 0; //init value of expense at 0
+
+        //set heading element to totalexpense
+        headingEl.textContent = totalexpense;
 
         //onbuttonclick and inputamt to totalexpense
         function addexpensetotal(){
@@ -30,15 +39,18 @@
 
             const inputElement = document.querySelector("#inputamt");
             const textamt = inputElement.value;
-            console.log({ textamt });
+            //console.log({ textamt });
 
             //convert it to no
             const expense = parseInt(textamt, 10);
-            console.log({ expense });
+            //console.log({ expense });
 
             //add that value to totalexpense
             totalexpense = totalexpense + expense;
-            console.log({ totalexpense });
+            //console.log({ totalexpense });
+
+            //set heading element to totalexpense
+            headingEl.textContent = totalexpense;
         }
 
          
