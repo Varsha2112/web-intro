@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> click & count </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        body{
+            display : flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        </style>
+
+</head>
+<body>
+   
+    <button id="btnCounter">.</button>
+    
+
+    <script>
+
+         //take a no which starts from zero
+         let counter = 0;
+
+        //function to increment the no
+        function counterIncrement() {
+        //every click increment a no.
+         counter = counter + 1;
+         console.log(counter);
+}
+        //get the btn element
+        const element = document.querySelector("#btnCounter");
+        
+        //console.log(element);
+        // listen to click event
+        element.addEventListener("click", counterIncrement, false);
+     
+       
+        
+        </script>
+
+</body>
+</html>
